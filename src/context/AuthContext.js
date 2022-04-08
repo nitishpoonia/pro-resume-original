@@ -10,8 +10,8 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState();
 
-  function signUp(email, password) {
-    return createUserWithEmailAndPassword(auth,email, password);
+  const signUp = async (email, password) => {
+    return await createUserWithEmailAndPassword(auth, email, password);
   }
 
   useEffect(() => {

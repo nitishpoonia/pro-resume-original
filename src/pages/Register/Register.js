@@ -34,37 +34,48 @@ const Register = () => {
     </Icon>
   );
 
-  const emailRef = useRef();
-  const passwordRef = useRef();
-  const passwordConfirmRef = useRef();
+  const { signUp } = useAuth();
 
-  const { signUp, currentUser } = useAuth();
   const [emailValue, setEmailValue] = useState("");
+  const [password, setPassword] = useState("");
+  const [confPassword, setConfPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+
   const handleClickShowPassword = () => setShowPassword(!showPassword);
   const handleMouseDownPassword = () => setShowPassword(!showPassword);
+
   const handleEmailChange = (e) => {
-    console.log(e.target.value);
     setEmailValue(e.target.value);
   };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value)
+  }
+  
+  const handleConfPasswordChange = (e) => {
+    setConfPassword(e.target.value)
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+    if (password !== confPassword) {
       return setError("Passwords do not match");
     }
-    console.log(emailRef.current.value);
+
     try {
       setError(""); //Set error to empty before trying again
       setLoading(true);
-      await signUp(emailRef.current.value, passwordRef.current.value);
+      await signUp(emailValue, password);
     } catch {
       setError("Failed To Create and Account");
     }
+
     setLoading(false);
   }
+  
   return (
     <ThemeProvider theme={theme}>
       <StyledContainer>
@@ -100,7 +111,6 @@ const Register = () => {
                     variant="outlined"
                     type="email"
                     margin="normal"
-                    ref={emailRef}
                     value={emailValue}
                     onChange={handleEmailChange}
                   />
@@ -108,7 +118,7 @@ const Register = () => {
                     id="outlined-password-input"
                     label="Password"
                     type={showPassword ? "text" : "password"} // <-- This is where the magic happens
-                    // onChange={someChangeHandler}
+                    onChange={handlePasswordChange}
                     InputProps={{
                       // <-- This is where the toggle button is added.
                       endAdornment: (
@@ -123,7 +133,6 @@ const Register = () => {
                         </InputAdornment>
                       ),
                     }}
-                    ref={passwordRef}
                     autoComplete="current-password"
                     margin="normal"
                   />
@@ -132,9 +141,8 @@ const Register = () => {
                     label="Confirm Password"
                     autoComplete="current-password"
                     margin="normal"
-                    ref={passwordConfirmRef}
                     type={showPassword ? "text" : "password"} // <-- This is where the magic happens
-                    // onChange={someChangeHandler}
+                    onChange={handleConfPasswordChange}
                     InputProps={{
                       // <-- This is where the toggle button is added.
                       endAdornment: (
