@@ -1,6 +1,5 @@
-import * as React from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
-import { ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -8,24 +7,18 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { Link } from "react-router-dom";
-import { theme } from "../GlobalStyles/ControlStyles";
+import { shadows } from "@mui/system";
+
+// style
 import "./HeaderStyle.scss";
-// const useStyles = makeStyles({
-//   header: {
-//     backgroundColor: "transparent",
-//     color: "black",
-//     boxShadow: "0px 0px 0px 0px",
-//   },
-// });
-const ResponsiveAppBar = () => {
+
+const LandingPage = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  // const classes = useStyles();
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -42,22 +35,20 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <AppBar position="static" color="neutral">
+    <div>
+      <AppBar
+        sx={{ backgroundColor: "white", color: "black", boxShadow: "none" }}
+        position="static"
+      >
         <Container maxWidth="xl">
-          <Toolbar
-            disableGutters
-            display=" flex"
-            justifyContent="space-between"
-          >
+          <Toolbar disableGutters>
             <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-              className="link"
             >
-              Pro Resume
+              Pro <span> Resume</span>
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -76,84 +67,94 @@ const ResponsiveAppBar = () => {
                 anchorEl={anchorElNav}
                 anchorOrigin={{
                   vertical: "bottom",
-                  horizontal: "right",
+                  horizontal: "left",
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: "top",
-                  horizontal: "right",
+                  horizontal: "left",
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
                   display: { xs: "block", md: "none" },
                 }}
-              ></Menu>
+              >
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Create Resume</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Resume Analyzer</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Apply Jobs</Typography>
+                </MenuItem>
+                {/* <MenuItem onClick={handleCloseNavMenu}>
+                  <Button>Sign In</Button>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Button>Start Free</Button>
+                </MenuItem> */}
+              </Menu>
             </Box>
             <Typography
               variant="h6"
               noWrap
               component="div"
-              sx={{
-                flexGrow: 1,
-                display: { xs: "flex", justifyContent: "flex-end", md: "none" },
-              }}
+              sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
             >
-              LOGO
+              Pro Resume
             </Typography>
             <Box
               sx={{
                 flexGrow: 1,
-                justifyContent: "space-between",
                 display: { xs: "none", md: "flex" },
+                justifyContent: "space-around",
               }}
             >
-              <Link to="/dashboard" className="link">
-                <MenuItem>Home</MenuItem>
-              </Link>
-
-              <Link className="link" to="/analyzecv">
-                <MenuItem>Analyse Resume</MenuItem>
-              </Link>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "black", display: "block" }}
+              >
+                <Typography textAlign="center">Create Resume</Typography>
+              </Button>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "black", display: "block" }}
+              >
+                <Typography textAlign="center">Resume Analyzer</Typography>
+              </Button>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "black", display: "block" }}
+              >
+                <Typography textAlign="center">Apply Jobs</Typography>
+              </Button>
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: "45px" }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
+              <Button>
+                <Typography>Sign In</Typography>
+              </Button>
+              <Button
+                sx={{
+                  color: "white",
+                  backgroundColor: "#1ea5fc",
+                  m: 2,
+                  px: 3,
+                  py: 1,
+                  boxShadow: 5,
+                  "&:hover": {backgroundColor: "#1ea5fc", boxShadow: 1},
                 }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
               >
-                <Link to="/dashboard">
-                  <MenuItem>Profile</MenuItem>
-                </Link>
-                <Link to="/dashboard">
-                  <MenuItem>Dashboard</MenuItem>
-                </Link>
-                <Link to="/logout">
-                  <MenuItem>Logout</MenuItem>
-                </Link>
-              </Menu>
+                <Typography>Start Free</Typography>
+              </Button>
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
-    </ThemeProvider>
+    </div>
   );
 };
-export default ResponsiveAppBar;
+
+export default LandingPage;

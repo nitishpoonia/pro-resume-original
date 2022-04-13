@@ -21,7 +21,6 @@ import arrowRightBlack from "../assets/arrow-right-black.svg";
 const MainPage = () => {
   return (
     <MainContainer>
- 
       <StyledCard>
         <TextContainer>
           <h1>Make your Resume</h1>

@@ -44,7 +44,8 @@ const GlobalStyle = createGlobalStyle`
   font-weight: bold;
 }
 
-:root{
+:root
+{
   /* Global Colors */
   --primary-color: #1EA5FC;
 
@@ -79,7 +80,7 @@ const GlobalStyle = createGlobalStyle`
     src:local('Gilroy'), url('./assets/fonts/Gilroy-Regular.otf'),
     url('./assets/fonts/Gilroy-Bold.otf'),
     url('./assets/fonts/Gilroy-Extrabold.otf');
-  }  
-`;
+  };  
+}`;
 
 export default GlobalStyle;

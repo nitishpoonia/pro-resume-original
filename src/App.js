@@ -15,13 +15,15 @@ import Summary from "./components/Summary";
 import Details from "./pages/Details";
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
+import LandingPage from "./pages/LandingPage/LandingPage";
 function App() {
   return (
     <AuthProvider>
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<Register />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/register" element={<Register />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/dashboard" element={<MainPage />} />
           <Route exact path="/analyzecv" element={<AnalyzeCV />} />
