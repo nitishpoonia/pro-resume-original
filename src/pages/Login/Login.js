@@ -27,13 +27,15 @@ import {
   SecondButtonContainer,
 } from "../Register/RegisterStyle";
 
-const Login = () => {
-  const { signIn } = useAuth();
+const Login = (props) => {
+  
+  const { signIn, currentUser } = useAuth();
   const [emailValue, setEmailValue] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleClickShowPassword = () => setShowPassword(!showPassword);
   const handleMouseDownPassword = () => setShowPassword(!showPassword);
@@ -56,10 +58,19 @@ const Login = () => {
       await signIn(emailValue, password);
     } catch {
       setError("Failed To Create and Account");
+      setLoading(false);
     }
 
-    setLoading(false);
   }
+
+
+  useEffect(() => {
+    if(currentUser){
+      setLoading(false);
+      navigate('/dashboard');
+    }
+  }, [currentUser])
+
   const googleIcon = (
     <Icon>
       <img src={googleicon} alt="Google Logo" />

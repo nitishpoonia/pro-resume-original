@@ -2,7 +2,7 @@ import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import AnalyzeCV from "./pages/AnalyzeCV/AnalyzeCV";
 
-import Header from "./components/Header/Header";
+import {Header} from "./components/Header";
 import CreateResume from "./pages/CreateResume";
 import MainPage from "./pages/MainPage";
 import PersonalDetails from "./components/PersonalDetails";
@@ -14,8 +14,9 @@ import Skills from "./components/Skills";
 import Summary from "./components/Summary";
 import Details from "./pages/Details";
 import { Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider, RequireAuth } from "./context/AuthContext";
 import LandingPage from "./pages/LandingPage/LandingPage";
+
 function App() {
   return (
     <AuthProvider>
@@ -25,7 +26,11 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/register" element={<Register />} />
           <Route exact path="/login" element={<Login />} />
-          <Route exact path="/dashboard" element={<MainPage />} />
+          <Route exact path="/dashboard" element={
+            <RequireAuth to="/login">
+              <MainPage />
+            </RequireAuth> 
+          } />
           <Route exact path="/analyzecv" element={<AnalyzeCV />} />
           <Route path="/createResume" element={<CreateResume />} />
           <Route path="/details" element={<Details />}>

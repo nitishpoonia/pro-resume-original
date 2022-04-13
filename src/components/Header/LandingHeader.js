@@ -14,8 +14,10 @@ import { shadows } from "@mui/system";
 
 // style
 import "./HeaderStyle.scss";
+import { useLocation } from "react-router-dom";
 
-const LandingPage = () => {
+export const LandingHeader = () => {
+  const location = useLocation();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -157,4 +159,3 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
