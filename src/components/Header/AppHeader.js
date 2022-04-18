@@ -44,7 +44,7 @@ export const AppHeader = () => {
                     <Toolbar
                         disableGutters
                         display=" flex"
-                        justifyContent="space-between"
+                        justifycontent="space-between"
                     >
                         <Typography
                             variant="h6"
