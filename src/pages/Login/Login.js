@@ -29,7 +29,7 @@ import {
 
 const Login = (props) => {
   
-  const { signIn, currentUser } = useAuth();
+  const { signIn, currentUser, googleSignIn } = useAuth();
   const [emailValue, setEmailValue] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -63,13 +63,17 @@ const Login = (props) => {
 
   }
 
+  const handleGoogleSignin = async () => {
+    await googleSignIn();
+  }
 
-  useEffect(() => {
-    if(currentUser){
-      setLoading(false);
-      navigate('/dashboard');
-    }
-  }, [currentUser])
+
+  // useEffect(() => {
+  //   if(currentUser){
+  //     setLoading(false);
+  //     navigate('/dashboard');
+  //   }
+  // }, [currentUser])
 
   const googleIcon = (
     <Icon>
@@ -168,11 +172,13 @@ const Login = (props) => {
                   display: "flex",
                   alignItems: "center",
                   margin: "20px 0 20px 0",
+                  lineHeight : "0"
                 }}
                 variant="contained"
                 startIcon={googleIcon}
                 color="neutral"
                 disabled={loading}
+                onClick={handleGoogleSignin}
               >
                 Or sign in with Google
               </SecondButton>

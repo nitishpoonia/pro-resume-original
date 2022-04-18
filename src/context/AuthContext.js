@@ -4,16 +4,22 @@ import { auth } from "../firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut
+  signOut,
+  signInWithPopup,
+  GoogleAuthProvider
 } from "firebase/auth";
 
-import { Navigate, useLocation } from "react-router-dom";
+
+
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Loader } from "../components/Loader";
 
 const AuthContext = React.createContext();
 
 export const useAuth = () => {
   return useContext(AuthContext);
 };
+
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState();
   const [authLoading, setAuthLoading] = useState(true);
@@ -24,6 +30,11 @@ export const AuthProvider = ({ children }) => {
 
   const signIn = async (email, password) => { 
     return await signInWithEmailAndPassword(auth, email, password);
+  }
+
+  const googleSignIn = async () => {
+    const gProvider = new GoogleAuthProvider();
+    return await signInWithPopup(auth, gProvider);
   }
 
   const signout = async () => {
@@ -46,26 +57,27 @@ export const AuthProvider = ({ children }) => {
     signUp,
     signIn,
     authLoading,
-    signout
+    signout,
+    googleSignIn
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
-export function RequireAuth({ to, children}) {
+
+export function AuthWrapper({ redirectTo, Fallback = Loader, afterAuth = false, children}) {
   let {currentUser, authLoading} = useAuth();
   let location = useLocation();
 
   if (authLoading){
     return <>
-      <h1>Loading...</h1>
+      <Fallback/>
     </>
   }
 
-  if (!currentUser) {
-    return <Navigate to={to} state={{ from: location }} replace />;
+  if ((!currentUser && !afterAuth) || (afterAuth && currentUser) ) {
+    return <Navigate to={redirectTo} state={{ from: location }} replace />;
   }
 
   return children;
 }
-
