@@ -56,8 +56,10 @@ const LandingPage = () => {
               </Typography>
               <Typography variant="h5" sx={{ color: "#64607D" }}>
                 By employing the best practices and innovative tech, ProResume
-                boosts your chances of landing a better job – completely for free.
+                boosts your chances of landing a better job – completely for
+                free.
               </Typography>
+
               <Button
                 sx={{
                   backgroundColor: "#1ea5fc",
@@ -106,9 +108,9 @@ const LandingPage = () => {
                 Create Resume in simple and easy steps
               </Typography>
               <Typography variant="h5" sx={{ color: "#64607D" }}>
-                Why kept very ever home mrs. Considered sympathize ten uncommonly
-                occasional assistance sufficient not. Letter of on become he
-                tended active enable to.
+                Why kept very ever home mrs. Considered sympathize ten
+                uncommonly occasional assistance sufficient not. Letter of on
+                become he tended active enable to.
               </Typography>
             </Box>
             <Box>
@@ -120,7 +122,10 @@ const LandingPage = () => {
           <Typography variant="h6" sx={{ color: "#1ea5fc" }}>
             Resume Template
           </Typography>
-          <Typography variant="h3" sx={{ fontWeight: 400, width: "40%", mb: 10 }}>
+          <Typography
+            variant="h3"
+            sx={{ fontWeight: 400, width: "40%", mb: 10 }}
+          >
             Start by choosing a resume template design
           </Typography>
           <Box
@@ -169,9 +174,9 @@ const LandingPage = () => {
                 Discover more than 100+ jobs and apply
               </Typography>
               <Typography variant="h5" sx={{ color: "#64607D" }}>
-                Why kept very ever home mrs. Considered sympathize ten uncommonly
-                occasional assistance sufficient not. Letter of on become he
-                tended active enable to. .
+                Why kept very ever home mrs. Considered sympathize ten
+                uncommonly occasional assistance sufficient not. Letter of on
+                become he tended active enable to. .
               </Typography>
               <Button
                 sx={{
@@ -195,6 +200,9 @@ const LandingPage = () => {
             </Box>
           </Box>
         </Box>
+
+        {/* Why choose us */}
+
         <Box sx={{ pl: 10, mt: 35, backgroundColor: "#f2f6fb" }}>
           <Typography variant="h2" sx={{ textAlign: "center" }}>
             Why Choose Us?
@@ -214,23 +222,37 @@ const LandingPage = () => {
               className="card"
               sx={{
                 width: "45%",
-                height: "200px",
-                borderRadius: "30px",
+                height: "230px",
                 display: "flex",
-                alignItems: "center",
+                px: 5,
+                pt: 3,
                 justifyContent: "space-between",
+                borderRadius: "30px",
               }}
             >
-              <CardMedia
-                component="img"
-                alt=""
-                height="80"
-                image={smile}
-                className="cardMedia"
-              />
+              <Box
+                sx={{
+                  dispaly: "flex",
+                  alignItems: "flex-start",
+                  height: "100px",
+                  width: "124px",
+                  pt: 2,
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  alt=""
+                  height="55"
+                  image={smile}
+                  className="cardMedia"
+                />
+              </Box>
+
               <CardContent>
-                <Typography variant="h5">Totally Free</Typography>
-                <Typography>
+                <Typography variant="h5" sx={{ fontWeight: "700", mb: 2 }}>
+                  Totally Free
+                </Typography>
+                <Typography sx={{ color: "#757095", fontSize: "18px" }}>
                   End-to-end payments and financial management in a single
                   solution. Meet the right platform.
                 </Typography>
@@ -238,18 +260,39 @@ const LandingPage = () => {
             </Card>
             <Card
               className="card"
-              sx={{ width: "45%", height: "200px", display: "flex" }}
+              sx={{
+                width: "45%",
+                height: "230px",
+                display: "flex",
+                px: 5,
+                pt: 3,
+                justifyContent: "space-between",
+                borderRadius: "30px",
+              }}
             >
-              <CardMedia
-                component="img"
-                alt=""
-                height="80"
-                image={box}
-                className="cardMedia"
-              />
+              <Box
+                sx={{
+                  dispaly: "flex",
+                  alignItems: "flex-start",
+                  height: "100px",
+                  width: "124px",
+                  pt: 2,
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  alt=""
+                  height="55"
+                  image={share}
+                  className="cardMedia"
+                />
+              </Box>
+
               <CardContent>
-                <Typography variant="h5">Totally Free</Typography>
-                <Typography>
+                <Typography variant="h5" sx={{ fontWeight: "700", mb: 2 }}>
+                  Totally Free
+                </Typography>
+                <Typography sx={{ color: "#757095", fontSize: "18px" }}>
                   End-to-end payments and financial management in a single
                   solution. Meet the right platform.
                 </Typography>
@@ -257,18 +300,39 @@ const LandingPage = () => {
             </Card>
             <Card
               className="card"
-              sx={{ width: "45%", height: "200px", display: "flex" }}
+              sx={{
+                width: "45%",
+                height: "230px",
+                display: "flex",
+                px: 5,
+                pt: 3,
+                justifyContent: "space-between",
+                borderRadius: "30px",
+              }}
             >
-              <CardMedia
-                component="img"
-                alt=""
-                height="80"
-                image={share}
-                className="cardMedia"
-              />
+              <Box
+                sx={{
+                  dispaly: "flex",
+                  alignItems: "flex-start",
+                  height: "100px",
+                  width: "124px",
+                  pt: 2,
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  alt=""
+                  height="55"
+                  image={box}
+                  className="cardMedia"
+                />
+              </Box>
+
               <CardContent>
-                <Typography variant="h5">Totally Free</Typography>
-                <Typography>
+                <Typography variant="h5" sx={{ fontWeight: "700", mb: 2 }}>
+                  Totally Free
+                </Typography>
+                <Typography sx={{ color: "#757095", fontSize: "18px" }}>
                   End-to-end payments and financial management in a single
                   solution. Meet the right platform.
                 </Typography>
@@ -276,18 +340,39 @@ const LandingPage = () => {
             </Card>
             <Card
               className="card"
-              sx={{ width: "45%", height: "200px", display: "flex" }}
+              sx={{
+                width: "45%",
+                height: "230px",
+                display: "flex",
+                px: 5,
+                pt: 3,
+                justifyContent: "space-between",
+                borderRadius: "30px",
+              }}
             >
-              <CardMedia
-                component="img"
-                alt=""
-                height="80"
-                image={tv}
-                className="cardMedia"
-              />
+              <Box
+                sx={{
+                  dispaly: "flex",
+                  alignItems: "flex-start",
+                  height: "100px",
+                  width: "124px",
+                  pt: 2,
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  alt=""
+                  height="55"
+                  image={tv}
+                  className="cardMedia"
+                />
+              </Box>
+
               <CardContent>
-                <Typography variant="h5">Totally Free</Typography>
-                <Typography>
+                <Typography variant="h5" sx={{ fontWeight: "700", mb: 2 }}>
+                  Totally Free
+                </Typography>
+                <Typography sx={{ color: "#757095", fontSize: "18px" }}>
                   End-to-end payments and financial management in a single
                   solution. Meet the right platform.
                 </Typography>
@@ -295,8 +380,21 @@ const LandingPage = () => {
             </Card>
           </Box>
         </Box>
+
+        {/* Meet our team */}
+        <Box>
+          
+        </Box>
+        {/* FAQs */}
+
         <Box
-          sx={{ pl: 10, mt: 25, display: "flex", width: "100%", margin: "auto" }}
+          sx={{
+            pl: 10,
+            mt: 25,
+            display: "flex",
+            width: "100%",
+            margin: "auto",
+          }}
         >
           <Box sx={{ width: "40%" }}>
             <Typography>Any Questions? We got You</Typography>
@@ -333,7 +431,9 @@ const LandingPage = () => {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography variant="h6">Is there any additional fee?</Typography>
+                <Typography variant="h6">
+                  Is there any additional fee?
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
