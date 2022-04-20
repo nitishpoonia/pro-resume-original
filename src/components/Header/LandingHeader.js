@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { shadows } from "@mui/system";
-
+import { StyledLink } from "../../pages/style";
 // style
 import "./HeaderStyle.scss";
 import { useLocation } from "react-router-dom";
@@ -135,22 +135,26 @@ export const LandingHeader = () => {
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
-              <Button>
-                <Typography>Sign In</Typography>
-              </Button>
-              <Button
-                sx={{
-                  color: "white",
-                  backgroundColor: "#1ea5fc",
-                  m: 2,
-                  px: 3,
-                  py: 1,
-                  boxShadow: 5,
-                  "&:hover": {backgroundColor: "#1ea5fc", boxShadow: 1},
-                }}
-              >
-                <Typography>Start Free</Typography>
-              </Button>
+              <StyledLink to="/login">
+                <Button>
+                  <Typography>Sign In</Typography>
+                </Button>
+              </StyledLink>
+              <StyledLink to="/register">
+                <Button
+                  sx={{
+                    color: "white",
+                    backgroundColor: "#1ea5fc",
+                    m: 2,
+                    px: 3,
+                    py: 1,
+                    boxShadow: 5,
+                    "&:hover": { backgroundColor: "#1ea5fc", boxShadow: 1 },
+                  }}
+                >
+                  <Typography>Start Free</Typography>
+                </Button>
+              </StyledLink>
             </Box>
           </Toolbar>
         </Container>
@@ -158,4 +162,3 @@ export const LandingHeader = () => {
     </div>
   );
 };
-

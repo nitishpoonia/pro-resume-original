@@ -1,3 +1,10 @@
-.MuiCardMedia-img {
-  width: 34%;
+.card {
+  margin-bottom: 30px;
+  display: "flex";
+
+  border-radius: "30px";
+}
+
+.hero-img {
+  width: 100%;
 }
