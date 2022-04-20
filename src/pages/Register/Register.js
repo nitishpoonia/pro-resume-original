@@ -81,7 +81,7 @@ const Register = () => {
       <StyledContainer>
         <LeftContainer>
           <Grid item>
-            <img src={RegisterImg} alt="" />
+            <img className="registerImg" src={RegisterImg} alt="" />
           </Grid>
         </LeftContainer>
         <RightContainer>
@@ -189,7 +189,7 @@ const Register = () => {
             <SecondButtonContainer>
               <SecondButton
                 sx={{
-                  color: "white",
+                  color: "black",
                   display: "flex",
                   alignItems: "center",
                   margin: "20px 0 20px 0",

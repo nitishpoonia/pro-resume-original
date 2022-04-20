@@ -3,7 +3,13 @@ import { TextField, Button } from "@mui/material";
 export const StyledContainer = styled.div`
   display: flex;
 `;
-export const LeftContainer = styled.div``;
+export const LeftContainer = styled.div`
+  @media screen and (max-width: 768px) {
+    .registerImg{
+      display: none;
+    }
+  }
+`;
 export const RightContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -51,9 +57,7 @@ export const MainButton = styled(Button)`
   margin-bottom: 20px;
 `;
 
-export const SecondButton = styled(MainButton)`
-
-`;
+export const SecondButton = styled(MainButton)``;
 
 export const SecondButtonContainer = styled.div`
   display: flex;

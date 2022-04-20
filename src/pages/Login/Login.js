@@ -28,7 +28,6 @@ import {
 } from "../Register/RegisterStyle";
 
 const Login = (props) => {
-  
   const { signIn, currentUser, googleSignIn } = useAuth();
   const [emailValue, setEmailValue] = useState("");
   const [password, setPassword] = useState("");
@@ -51,7 +50,6 @@ const Login = (props) => {
   async function handleSubmit(e) {
     e.preventDefault();
 
-
     try {
       setError(""); //Set error to empty before trying again
       setLoading(true);
@@ -60,13 +58,11 @@ const Login = (props) => {
       setError("Failed To Create and Account");
       setLoading(false);
     }
-
   }
 
   const handleGoogleSignin = async () => {
     await googleSignIn();
-  }
-
+  };
 
   // useEffect(() => {
   //   if(currentUser){
@@ -85,15 +81,22 @@ const Login = (props) => {
     <ThemeProvider theme={theme}>
       <StyledContainer>
         <LeftContainer>
-          <Grid item>
-            <img src={RegisterImg} alt="" />
+          <Grid
+            item
+            
+          >
+            <img
+              className="registerImg"
+              src={RegisterImg}
+              alt=""
+            />
           </Grid>
         </LeftContainer>
         <RightContainer>
           <UpperTextContainer>
             <LogoContainer>
               <img src={proLogo} alt="Pro Resume Logo" />
-              <Typography varaint="h1">
+              <Typography variant="h3">
                 Pro<span>Resume</span>
               </Typography>
             </LogoContainer>
@@ -172,7 +175,7 @@ const Login = (props) => {
                   display: "flex",
                   alignItems: "center",
                   margin: "20px 0 20px 0",
-                  lineHeight : "0"
+                  lineHeight: "0",
                 }}
                 variant="contained"
                 startIcon={googleIcon}
