@@ -25,4 +25,3 @@ export const SecondaryButton = styled(Button)`
     fill: "black";
   }
 `;
-

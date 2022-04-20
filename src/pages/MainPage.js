@@ -38,7 +38,7 @@ const MainPage = () => {
           <img src={Andrew} alt="" />
         </div>
       </StyledCard>
-      <SecondaryPageContainer>
+       <SecondaryPageContainer>
         <LeftStyledCard>
           <SecondaryTextContainer>
             <h1>Analyze Your CV</h1>
@@ -70,7 +70,7 @@ const MainPage = () => {
             <img src={applyJobs} alt="" />
           </SecondContainer>
         </LeftStyledCard>
-      </SecondaryPageContainer>
+      </SecondaryPageContainer> 
     </MainContainer>
   );
 };
