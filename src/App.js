@@ -14,8 +14,9 @@ import Skills from "./components/Skills";
 import Summary from "./components/Summary";
 import Details from "./pages/Details";
 import { Routes, Route } from "react-router-dom";
-import { AuthProvider, RequireAuth } from "./context/AuthContext";
+import { AuthProvider, AuthWrapper } from "./context/AuthContext";
 import LandingPage from "./pages/LandingPage/LandingPage";
+import { Loader } from "./components/Loader";
 
 function App() {
   return (
@@ -25,15 +26,27 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/register" element={<Register />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/login" element={
+            <AuthWrapper afterAuth={true} redirectTo="/dashboard">
+              <Login />
+            </AuthWrapper>   
+          } />
           <Route exact path="/dashboard" element={
-            <RequireAuth to="/login">
+            <AuthWrapper redirectTo="/login">
               <MainPage />
-            </RequireAuth> 
+            </AuthWrapper> 
           } />
           <Route exact path="/analyzecv" element={<AnalyzeCV />} />
-          <Route path="/createResume" element={<CreateResume />} />
-          <Route path="/details" element={<Details />}>
+          <Route path="/createResume" element={
+            <AuthWrapper>
+              <CreateResume />
+            </AuthWrapper>
+          } />
+          <Route path="/details" element={
+            <AuthWrapper redirectTo="/login" >
+              <Details />
+            </AuthWrapper> 
+          }>
             <Route path="personalDetails" element={<PersonalDetails />} />
             <Route path="certificates" element={<Certificates />} />
             <Route path="edu" element={<Education />} />
