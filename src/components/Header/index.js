@@ -4,8 +4,8 @@ import {AppHeader} from "./AppHeader"
 
 export const Header = () => {
     const location = useLocation();
-
-    if(location.pathname.includes("/login")){
+    const excludePaths = ["/register", "/login"];
+    if (excludePaths.includes(location.pathname)){
         return null;
     }
 
