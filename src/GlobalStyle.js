@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`zz
   *{
       padding: 0;
       margin: 0;

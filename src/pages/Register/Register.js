@@ -10,8 +10,8 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 // Images and Styles
 import googleicon from "../../assets/googleicon.svg";
 import { IOSSwitch, theme } from "../../components/GlobalStyles/ControlStyles";
-import RegisterImg from "../../assets/RegisterImg.svg";
-import proLogo from "../../assets/proLogo.svg";
+import RegisterImg from "../../assets/RegisterImg.png";
+import ProResume from "../../assets/ProResume.png";
 import {
   LeftContainer,
   RightContainer,
@@ -87,10 +87,7 @@ const Register = () => {
         <RightContainer>
           <UpperTextContainer>
             <LogoContainer>
-              <img src={proLogo} alt="Pro Resume Logo" />
-              <Typography variant="h3">
-                Pro<span>Resume</span>
-              </Typography>
+              <img src={ProResume} alt="Pro Resume Logo" />
             </LogoContainer>
 
             <CreateNewAccount>
@@ -173,6 +170,7 @@ const Register = () => {
                     sx={{
                       color: "white",
                       marginBottom: "20px",
+                      padding: "10px 0px",
                     }}
                     variant="contained"
                     color="primary"
@@ -187,6 +185,28 @@ const Register = () => {
 
             <hr />
             <SecondButtonContainer>
+              <SecondButton
+                sx={{
+                  background: "black",
+                  padding: "10px 0px",
+                  color: "white",
+                  display: "flex",
+                  alignItems: "center",
+                  margin: "20px 0 20px 0",
+                  lineHeight: "0",
+                }}
+                variant="contained"
+                startIcon={googleIcon}
+                color="neutral"
+                disabled={loading}
+              >
+                Or sign up with Google
+              </SecondButton>
+              <p>
+              Already Have an account? <Link to="/login">Sign in now</Link>{" "}
+              </p>
+            </SecondButtonContainer>
+            {/* <SecondButtonContainer>
               <SecondButton
                 sx={{
                   color: "black",
@@ -204,7 +224,7 @@ const Register = () => {
               <Typography>
                 Already Have an account? <Link to="/login">Sign in now</Link>{" "}
               </Typography>
-            </SecondButtonContainer>
+            </SecondButtonContainer> */}
           </UpperTextContainer>
 
           <div>
