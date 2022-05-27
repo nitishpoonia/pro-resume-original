@@ -10,8 +10,8 @@ import googleicon from "../../assets/googleicon.svg";
 import { IOSSwitch, theme } from "../../components/GlobalStyles/ControlStyles";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import RegisterImg from "../../assets/RegisterImg.svg";
-import proLogo from "../../assets/proLogo.svg";
+import LoginImg from "../../assets/LoginImg.png";
+import ProResume from "../../assets/ProResume.png";
 import { useAuth } from "../../context/AuthContext";
 import {
   LeftContainer,
@@ -86,8 +86,8 @@ const Login = (props) => {
             
           >
             <img
-              className="registerImg"
-              src={RegisterImg}
+              className="LoginImg"
+              src={LoginImg}
               alt=""
             />
           </Grid>
@@ -95,10 +95,7 @@ const Login = (props) => {
         <RightContainer>
           <UpperTextContainer>
             <LogoContainer>
-              <img src={proLogo} alt="Pro Resume Logo" />
-              <Typography variant="h3">
-                Pro<span>Resume</span>
-              </Typography>
+              <img src={ProResume} alt="Pro Resume Logo" />
             </LogoContainer>
 
             <CreateNewAccount>
@@ -155,6 +152,7 @@ const Login = (props) => {
                     sx={{
                       color: "white",
                       marginBottom: "20px",
+                      padding: "10px 0px",
                     }}
                     variant="contained"
                     color="primary"
@@ -171,7 +169,9 @@ const Login = (props) => {
             <SecondButtonContainer>
               <SecondButton
                 sx={{
-                  color: "black",
+                  background: "black",
+                  padding: "10px 0px",
+                  color: "white",
                   display: "flex",
                   alignItems: "center",
                   margin: "20px 0 20px 0",
