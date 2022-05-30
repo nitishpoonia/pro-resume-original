@@ -157,19 +157,11 @@ const Register = () => {
                   />
                 </div>
 
-                <ForgotPassword>
-                  <FormControlLabel
-                    control={<IOSSwitch sx={{ m: 1 }} defaultChecked={false} />}
-                    label="Remember Me"
-                  />
-                  <Link to="/reset">Forgot your password?</Link>
-                </ForgotPassword>
-
                 <div>
                   <MainButton
                     sx={{
                       color: "white",
-                      marginBottom: "20px",
+                      marginTop: "25px",
                       padding: "10px 0px",
                     }}
                     variant="contained"
@@ -206,30 +198,14 @@ const Register = () => {
               Already Have an account? <Link to="/login">Sign in now</Link>{" "}
               </p>
             </SecondButtonContainer>
-            {/* <SecondButtonContainer>
-              <SecondButton
-                sx={{
-                  color: "black",
-                  display: "flex",
-                  alignItems: "center",
-                  margin: "20px 0 20px 0",
-                }}
-                variant="contained"
-                startIcon={googleIcon}
-                color="neutral"
-                disabled={loading}
-              >
-                Or sign up with Google
-              </SecondButton>
-              <Typography>
-                Already Have an account? <Link to="/login">Sign in now</Link>{" "}
-              </Typography>
-            </SecondButtonContainer> */}
+            
           </UpperTextContainer>
 
           <div>
             <Typography>
+            <p>
               &copy; Pro Resume {new Date().getFullYear()}
+            </p>
             </Typography>
           </div>
         </RightContainer>

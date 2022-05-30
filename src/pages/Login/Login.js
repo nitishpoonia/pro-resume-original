@@ -110,7 +110,6 @@ const Login = (props) => {
                     label="Email"
                     variant="outlined"
                     type="email"
-                    helperText="Email or Phone Number"
                     value={emailValue}
                     onChange={handleEmailChange}
                     margin="normal"
@@ -139,19 +138,11 @@ const Login = (props) => {
                   />
                 </div>
 
-                <ForgotPassword>
-                  <FormControlLabel
-                    control={<IOSSwitch sx={{ m: 1 }} defaultChecked={false} />}
-                    label="Remember Me"
-                  />
-                  <Link to="/reset">Forgot your password?</Link>
-                </ForgotPassword>
-
                 <div>
                   <MainButton
                     sx={{
                       color: "white",
-                      marginBottom: "20px",
+                      marginTop: "25px",
                       padding: "10px 0px",
                     }}
                     variant="contained"

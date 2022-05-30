@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import {  Link, Outlet } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import myClasses from "./Left.module.css";
-import logo from "../../assets/default.png";
+import ProResume from "../../assets/ProResume.png";
 import { ResumeContext } from "../../context/ResumeContext";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -83,8 +83,8 @@ function Left() {
     <div className="left">
       <div className={myClasses.headerLeft}>
         <div styles={{ flexGrow: 2 }}>
-          <Link to="/" style={{ display: "inline" }}>
-            <img src={logo} alt="logo" />
+          <Link to="/" >
+            <img style={{ width: "150px", height: "45px", margin: "10px 10px"}} src={ProResume} alt="Pro Resumelogo" />
           </Link>
         </div>
         <div styles={{ flexGrow: 1 }}>{expData}</div>
