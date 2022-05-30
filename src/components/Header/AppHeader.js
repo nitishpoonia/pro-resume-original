@@ -113,14 +113,16 @@ export const AppHeader = () => {
                             </Link>
                         </Box>
 
-                        <Box sx={{ flexGrow: 0 }}>
-                            <Tooltip title="Open settings">
+                        <Box sx={{ flexGrow: 0}}>
+                            <Tooltip 
+                             sx={{ mt: "45px", display: "flex", flexDirection: "column" }}
+                            title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                     <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                                 </IconButton>
                             </Tooltip>
-                            <Menu
-                                sx={{ mt: "45px" }}
+                            <Menu 
+                                sx={{ mt: "45px", display: "flex", flexDirection: "column", padding: "10px" }}
                                 id="menu-appbar"
                                 anchorEl={anchorElUser}
                                 anchorOrigin={{
@@ -135,7 +137,8 @@ export const AppHeader = () => {
                                 open={Boolean(anchorElUser)}
                                 onClose={handleCloseUserMenu}
                             >
-                                <Link to="/dashboard">
+                                <Link 
+                                to="/dashboard">
                                     <MenuItem>Profile</MenuItem>
                                 </Link>
                                 <Link to="/dashboard">

@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import ProResume from "../../assets/ProResume.png";
 import { shadows } from "@mui/system";
 import { StyledLink } from "../../pages/style";
 // style
@@ -50,7 +51,7 @@ export const LandingHeader = () => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              Pro <span> Resume</span>
+              <img src={ProResume} alt="Pro Resume Logo" />
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
