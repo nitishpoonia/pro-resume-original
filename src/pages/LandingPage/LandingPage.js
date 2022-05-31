@@ -32,7 +32,7 @@ const LandingPage = () => {
   return (
     <>
       <div>
-         <Box
+        <Box
           sx={{
             "@media screen and (max-width: 768px)": {
               display: "flex",
@@ -136,8 +136,8 @@ const LandingPage = () => {
               <img className="hero-img" src={heroImg} alt="" />
             </Box>
           </Box>
-        </Box>   
-         <Box>
+        </Box>
+        <Box>
           <Box
             sx={{
               display: "flex",
@@ -183,8 +183,9 @@ const LandingPage = () => {
                   fontWeight: 400,
                   "@media screen and (max-width:768px)": {
                     fontSize: "1.6rem",
-                    my: 3
+                    my: 3,
                   },
+                  textDecoration: "capitalize",
                 }}
               >
                 Create Resume in simple and easy steps
@@ -213,7 +214,7 @@ const LandingPage = () => {
               <img className="hero-img" src={resume} alt="" />
             </Box>
           </Box>
-        </Box> 
+        </Box>
         <Box
           sx={{
             pl: 10,
@@ -222,7 +223,7 @@ const LandingPage = () => {
               flexDirection: "column",
               pl: 0,
               mx: 3,
-              mt: 20
+              mt: 20,
             },
           }}
         >
@@ -278,8 +279,8 @@ const LandingPage = () => {
               </div>
             </Carousel>
           </Box>
-        </Box> 
-         <Box>
+        </Box>
+        <Box>
           <Box
             sx={{
               display: "flex",
@@ -339,7 +340,7 @@ const LandingPage = () => {
                 sx={{
                   backgroundColor: "#1ea5fc",
                   color: "white",
-                  textTransform:"capitalize",
+                  textTransform: "capitalize",
                   px: 4,
                   py: 2,
                   "&:hover": {
@@ -368,7 +369,7 @@ const LandingPage = () => {
               <img className="hero-img" src={googlePayPal} alt="" />
             </Box>
           </Box>
-        </Box> 
+        </Box>
 
         {/* Why choose us */}
 
@@ -405,7 +406,7 @@ const LandingPage = () => {
               flexWrap: "wrap",
               justifyContent: "space-between",
               margin: "auto",
-              p: 20,
+              p:10,
               pt: 11,
               "@media screen and (max-width: 768px)": {
                 p: 0,
@@ -433,7 +434,7 @@ const LandingPage = () => {
                   dispaly: "flex",
                   alignItems: "flex-start",
                   height: "100px",
-                  width:"100px",
+                  width: "100px",
                   pt: 2,
                 }}
               >
@@ -467,8 +468,8 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  End-to-end payments and financial management in a single solution.
-                  Meet the right platform.
+                  End-to-end payments and financial management in a single
+                  solution. Meet the right platform.
                 </Typography>
               </CardContent>
             </Card>
@@ -526,8 +527,9 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  Forget about Word templates and hours of editing.
-                  Powered by intelligent technologies, ProResume will save your time and guide you to the best version of your resume.
+                  Forget about Word templates and hours of editing. Powered by
+                  intelligent technologies, ProResume will save your time and
+                  guide you to the best version of your resume.
                 </Typography>
               </CardContent>
             </Card>
@@ -558,7 +560,6 @@ const LandingPage = () => {
                 <CardMedia
                   component="img"
                   alt=""
-                  
                   image={box}
                   className="cardMedia"
                 />
@@ -586,8 +587,9 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  Just choose from a list of templates and jump-start the configuration.
-                  Every template can be adjusted to make it your own style.
+                  Just choose from a list of templates and jump-start the
+                  configuration. Every template can be adjusted to make it your
+                  own style.
                 </Typography>
               </CardContent>
             </Card>
@@ -645,8 +647,9 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  A select library of expertly designed templates for easy online resume making, all created by professional graphic designers.
-                  Choose from various styles and formats with ease.
+                  A select library of expertly designed templates for easy
+                  online resume making, all created by professional graphic
+                  designers. Choose from various styles and formats with ease.
                 </Typography>
               </CardContent>
             </Card>
@@ -654,7 +657,7 @@ const LandingPage = () => {
         </Box>
 
         {/* Meet our team */}
-         <Box
+        <Box
           sx={{
             display: "flex",
             alignItems: "center",
@@ -745,7 +748,7 @@ const LandingPage = () => {
               </Typography>
             </Box>
           </Box>
-        </Box> 
+        </Box>
 
         {/* FAQs */}
 
@@ -766,7 +769,7 @@ const LandingPage = () => {
             <Typography
               variant="h2"
               sx={{
-                fontWeight: "700", 
+                fontWeight: "700",
                 width: "80%",
                 mb: 5,
                 "@media screen and (max-width: 768px)": {
@@ -793,7 +796,7 @@ const LandingPage = () => {
               boisterous the attachment.
             </Typography>
           </Box>
-          <Box sx={{width:"70%"}}>
+          <Box sx={{ width: "70%" }}>
             <Accordion
               sx={{ mb: 3, boxShadow: "none", borderBottom: "2px solid black" }}
             >
@@ -806,8 +809,9 @@ const LandingPage = () => {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                Our online resume builder features design and customization tools with real-time previews available,
-                giving you the ultimate control over the look and feel of your resume.
+                  Our online resume builder features design and customization
+                  tools with real-time previews available, giving you the
+                  ultimate control over the look and feel of your resume.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -819,13 +823,16 @@ const LandingPage = () => {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography variant="h6">Is Resume Builder really free?</Typography>
+                <Typography variant="h6">
+                  Is Resume Builder really free?
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                Yes, resume-builder-and-analyzer.web.app is completely free for everyone.
-                After creating a Resume, you can login into the ResumeBuilder Dashboard and download your resume in PDF format for free.
-                There’s no trickery, no hidden cost.
+                  Yes, resume-builder-and-analyzer.web.app is completely free
+                  for everyone. After creating a Resume, you can login into the
+                  ResumeBuilder Dashboard and download your resume in PDF format
+                  for free. There’s no trickery, no hidden cost.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -837,12 +844,17 @@ const LandingPage = () => {
                 aria-controls="panel3a-content"
                 id="panel2a-header"
               >
-                <Typography variant="h6">Which is the best Resume Template?</Typography>
+                <Typography variant="h6">
+                  Which is the best Resume Template?
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>Every resume template is unique in its own way and serve its purpose.
-                Our suggestion is to go with whichever template that catches your attention.
-                Since each recruiter/employer has its preferences, there is no “best resume template or format” that will be suitable for all the positions/jobs.
+                <Typography>
+                  Every resume template is unique in its own way and serve its
+                  purpose. Our suggestion is to go with whichever template that
+                  catches your attention. Since each recruiter/employer has its
+                  preferences, there is no “best resume template or format” that
+                  will be suitable for all the positions/jobs.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -859,12 +871,18 @@ const LandingPage = () => {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography variant="h6">How long should a Resume be?</Typography>
+                <Typography variant="h6">
+                  How long should a Resume be?
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                From research it has been found that most of the recruiters recommend using maximum one page resume, especially when you are a student or having less than 5 years of relevant work experience.
-                Even if you have more than 5 years work experience and many other relevant activities that are relevant to the job you are applying for, don’t go beyond 2-3 pages
+                  From research it has been found that most of the recruiters
+                  recommend using maximum one page resume, especially when you
+                  are a student or having less than 5 years of relevant work
+                  experience. Even if you have more than 5 years work experience
+                  and many other relevant activities that are relevant to the
+                  job you are applying for, don’t go beyond 2-3 pages
                 </Typography>
               </AccordionDetails>
             </Accordion>
