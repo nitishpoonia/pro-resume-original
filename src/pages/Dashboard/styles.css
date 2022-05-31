@@ -12,7 +12,7 @@ body {
 .left {
   background-color: #fff;
   width: 25vw;
-  box-shadow: 0 0 0.5cm #7b7d7d;
+  box-shadow: 8px 4px 65px 3px rgba(155, 150, 150, 0.25);
 }
 
 .right {
