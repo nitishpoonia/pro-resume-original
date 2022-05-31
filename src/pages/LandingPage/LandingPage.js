@@ -180,12 +180,13 @@ const LandingPage = () => {
               <Typography
                 variant="h3"
                 sx={{
-                  fontWeight: 400,
+                  fontWeight: 700,
+                  color: "#2e4053",
                   "@media screen and (max-width:768px)": {
                     fontSize: "1.6rem",
                     my: 3,
                   },
-                  textDecoration: "capitalize",
+                  textTransform: "capitalize",
                 }}
               >
                 Create Resume in simple and easy steps
@@ -241,7 +242,8 @@ const LandingPage = () => {
           <Typography
             variant="h3"
             sx={{
-              fontWeight: 400,
+              fontWeight: 600,
+              color: "#2e4053",
               width: "40%",
               mb: 10,
               "@media screen and (max-width: 768px)": {
@@ -249,6 +251,7 @@ const LandingPage = () => {
                 width: "100%",
                 mb: 3,
               },
+              textTransform: "capitalize",
             }}
           >
             Start by choosing a resume template design
@@ -406,7 +409,7 @@ const LandingPage = () => {
               flexWrap: "wrap",
               justifyContent: "space-between",
               margin: "auto",
-              p:10,
+              p: 10,
               pt: 11,
               "@media screen and (max-width: 768px)": {
                 p: 0,
