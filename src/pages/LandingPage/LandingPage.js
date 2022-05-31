@@ -24,7 +24,7 @@ import smile from "../../assets/LandingPageAssets/ChooseUs/smile.svg";
 import box from "../../assets/LandingPageAssets/ChooseUs/box.svg";
 import tv from "../../assets/LandingPageAssets/ChooseUs/tv.svg";
 import share from "../../assets/LandingPageAssets/ChooseUs/share.svg";
-import teamMember from "../../assets/LandingPageAssets/TeamMembers.svg";
+import teamMember from "../../assets/LandingPageAssets/TeamMembers.png";
 // style
 import "./LandingPageStyle.scss";
 
@@ -575,7 +575,7 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  Customizable template
+                  Customizable Template
                 </Typography>
                 <Typography
                   sx={{
@@ -722,7 +722,7 @@ const LandingPage = () => {
             </Box>
             <Box
               sx={{
-                width: "70%",
+                width: "80%",
                 "@media screen and (max-width: 768px)": {
                   width: "100%",
                 },

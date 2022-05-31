@@ -135,13 +135,6 @@ export const AppHeader = () => {
                                 open={Boolean(anchorElUser)}
                                 onClose={handleCloseUserMenu}
                             >
-                                <Link 
-                                to="/dashboard">
-                                    <MenuItem>Profile</MenuItem>
-                                </Link>
-                                <Link to="/dashboard">
-                                    <MenuItem>Dashboard</MenuItem>
-                                </Link>
                                 <Link to="/dashboard" onClick={() => {signout()}}>
                                     <MenuItem>Logout</MenuItem>
                                 </Link>
