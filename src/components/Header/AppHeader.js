@@ -11,6 +11,7 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { theme } from "../GlobalStyles/ControlStyles";
 import "./HeaderStyle.scss";
@@ -104,13 +105,10 @@ export const AppHeader = () => {
                                 display: { xs: "none", md: "flex" },
                             }}
                         >
-                            <Link to="/dashboard" className="link">
+                            <Link to="/" className="link">
                                 <MenuItem>Home</MenuItem>
                             </Link>
 
-                            <Link className="link" to="/analyzecv">
-                                <MenuItem>Analyse Resume</MenuItem>
-                            </Link>
                         </Box>
 
                         <Box sx={{ flexGrow: 0}}>

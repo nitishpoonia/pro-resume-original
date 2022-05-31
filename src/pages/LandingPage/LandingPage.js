@@ -339,6 +339,7 @@ const LandingPage = () => {
                 sx={{
                   backgroundColor: "#1ea5fc",
                   color: "white",
+                  textTransform:"capitalize",
                   px: 4,
                   py: 2,
                   "&:hover": {
@@ -354,7 +355,7 @@ const LandingPage = () => {
                   },
                 }}
               >
-                Get Started
+                Coming Soon...
               </Button>
             </Box>
             <Box
@@ -391,7 +392,7 @@ const LandingPage = () => {
               "@media screen and (max-width: 768px)": {
                 fontSize: "1.4rem",
                 fontWeight: 700,
-                pt: 4,
+                pt: 5,
                 mb: 4,
               },
             }}
@@ -402,11 +403,10 @@ const LandingPage = () => {
             sx={{
               display: "flex",
               flexWrap: "wrap",
-              width: "100%",
               justifyContent: "space-between",
               margin: "auto",
               p: 20,
-              pt: 15,
+              pt: 11,
               "@media screen and (max-width: 768px)": {
                 p: 0,
               },
@@ -415,11 +415,11 @@ const LandingPage = () => {
             <Card
               className="card"
               sx={{
-                width: "45%",
+                width: "450px",
                 height: "230px",
                 display: "flex",
                 px: 5,
-                pt: 3,
+                pt: 5,
                 justifyContent: "space-between",
                 borderRadius: "30px",
                 "@media screen and (max-width: 768px)": {
@@ -433,14 +433,13 @@ const LandingPage = () => {
                   dispaly: "flex",
                   alignItems: "flex-start",
                   height: "100px",
-                  width: "124px",
+                  width:"100px",
                   pt: 2,
                 }}
               >
                 <CardMedia
                   component="img"
                   alt=""
-                  height="55"
                   image={smile}
                   className="cardMedia"
                 />
@@ -468,19 +467,19 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  End-to-end payments and financial management in a single
-                  solution. Meet the right platform.
+                  End-to-end payments and financial management in a single solution.
+                  Meet the right platform.
                 </Typography>
               </CardContent>
             </Card>
             <Card
               className="card"
               sx={{
-                width: "45%",
+                width: "450px",
                 height: "230px",
                 display: "flex",
                 px: 5,
-                pt: 3,
+                pt: 5,
                 justifyContent: "space-between",
                 borderRadius: "30px",
                 "@media screen and (max-width: 768px)": {
@@ -492,15 +491,14 @@ const LandingPage = () => {
                 sx={{
                   dispaly: "flex",
                   alignItems: "flex-start",
-                  height: "100px",
-                  width: "124px",
-                  pt: 2,
+                  height: "175px",
+                  width: "175px",
+                  pt: 3,
                 }}
               >
                 <CardMedia
                   component="img"
                   alt=""
-                  height="55"
                   image={share}
                   className="cardMedia"
                 />
@@ -517,7 +515,7 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  Totally Free
+                  Smart
                 </Typography>
                 <Typography
                   sx={{
@@ -528,19 +526,19 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  End-to-end payments and financial management in a single
-                  solution. Meet the right platform.
+                  Forget about Word templates and hours of editing.
+                  Powered by intelligent technologies, ProResume will save your time and guide you to the best version of your resume.
                 </Typography>
               </CardContent>
             </Card>
             <Card
               className="card"
               sx={{
-                width: "45%",
+                width: "450px",
                 height: "230px",
                 display: "flex",
                 px: 5,
-                pt: 3,
+                pt: 5,
                 justifyContent: "space-between",
                 borderRadius: "30px",
                 "@media screen and (max-width: 768px)": {
@@ -552,15 +550,15 @@ const LandingPage = () => {
                 sx={{
                   dispaly: "flex",
                   alignItems: "flex-start",
-                  height: "100px",
-                  width: "124px",
+                  height: "150px",
+                  width: "150px",
                   pt: 2,
                 }}
               >
                 <CardMedia
                   component="img"
                   alt=""
-                  height="55"
+                  
                   image={box}
                   className="cardMedia"
                 />
@@ -577,7 +575,7 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  Totally Free
+                  Customizable template
                 </Typography>
                 <Typography
                   sx={{
@@ -588,19 +586,19 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  End-to-end payments and financial management in a single
-                  solution. Meet the right platform.
+                  Just choose from a list of templates and jump-start the configuration.
+                  Every template can be adjusted to make it your own style.
                 </Typography>
               </CardContent>
             </Card>
             <Card
               className="card"
               sx={{
-                width: "45%",
+                width: "450px",
                 height: "230px",
                 display: "flex",
                 px: 5,
-                pt: 3,
+                pt: 5,
                 justifyContent: "space-between",
                 borderRadius: "30px",
                 "@media screen and (max-width: 768px)": {
@@ -612,15 +610,14 @@ const LandingPage = () => {
                 sx={{
                   dispaly: "flex",
                   alignItems: "flex-start",
-                  height: "100px",
-                  width: "124px",
+                  height: "175px",
+                  width: "175px",
                   pt: 2,
                 }}
               >
                 <CardMedia
                   component="img"
                   alt=""
-                  height="55"
                   image={tv}
                   className="cardMedia"
                 />
@@ -637,7 +634,7 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  Totally Free
+                  Create Unlimited Resumes
                 </Typography>
                 <Typography
                   sx={{
@@ -648,8 +645,8 @@ const LandingPage = () => {
                     },
                   }}
                 >
-                  End-to-end payments and financial management in a single
-                  solution. Meet the right platform.
+                  A select library of expertly designed templates for easy online resume making, all created by professional graphic designers.
+                  Choose from various styles and formats with ease.
                 </Typography>
               </CardContent>
             </Card>
@@ -769,7 +766,7 @@ const LandingPage = () => {
             <Typography
               variant="h2"
               sx={{
-                fontWeight: "700",
+                fontWeight: "700", 
                 width: "80%",
                 mb: 5,
                 "@media screen and (max-width: 768px)": {
@@ -796,7 +793,7 @@ const LandingPage = () => {
               boisterous the attachment.
             </Typography>
           </Box>
-          <Box sx={{}}>
+          <Box sx={{width:"70%"}}>
             <Accordion
               sx={{ mb: 3, boxShadow: "none", borderBottom: "2px solid black" }}
             >
@@ -805,13 +802,12 @@ const LandingPage = () => {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography variant="h6">How this Works</Typography>
+                <Typography variant="h6">How Resume Builder works?</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
+                Our online resume builder features design and customization tools with real-time previews available,
+                giving you the ultimate control over the look and feel of your resume.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -823,15 +819,13 @@ const LandingPage = () => {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography variant="h6">
-                  Is there any additional fee?
-                </Typography>
+                <Typography variant="h6">Is Resume Builder really free?</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
+                Yes, resume-builder-and-analyzer.web.app is completely free for everyone.
+                After creating a Resume, you can login into the ResumeBuilder Dashboard and download your resume in PDF format for free.
+                There’s no trickery, no hidden cost.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -843,10 +837,13 @@ const LandingPage = () => {
                 aria-controls="panel3a-content"
                 id="panel2a-header"
               >
-                <Typography variant="h6">How can I get the App?</Typography>
+                <Typography variant="h6">Which is the best Resume Template?</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography></Typography>
+                <Typography>Every resume template is unique in its own way and serve its purpose.
+                Our suggestion is to go with whichever template that catches your attention.
+                Since each recruiter/employer has its preferences, there is no “best resume template or format” that will be suitable for all the positions/jobs.
+                </Typography>
               </AccordionDetails>
             </Accordion>
 
@@ -862,10 +859,13 @@ const LandingPage = () => {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography variant="h6">How can I get the App?</Typography>
+                <Typography variant="h6">How long should a Resume be?</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography></Typography>
+                <Typography>
+                From research it has been found that most of the recruiters recommend using maximum one page resume, especially when you are a student or having less than 5 years of relevant work experience.
+                Even if you have more than 5 years work experience and many other relevant activities that are relevant to the job you are applying for, don’t go beyond 2-3 pages
+                </Typography>
               </AccordionDetails>
             </Accordion>
           </Box>
